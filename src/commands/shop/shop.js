@@ -38,6 +38,6 @@ module.exports = {
                 .setDisabled(cards.length <= 1) // Tombol Next dinonaktifkan jika hanya ada satu kartu
         );
 
-        await interaction.reply({ embeds: [embed], components: [row] });
+        await interaction.reply({ embeds: [embed], components: [row], ephemeral: true });
     }
 };
