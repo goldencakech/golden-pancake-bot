@@ -1,0 +1,14 @@
+# Node.js dependencies
+node_modules/
+
+# File lingkungan / environment variables (SANGAT SENSITIF)
+.env
+.env.local
+
+# File buatan OS
+.DS_Store
+Thumbs.db
+
+# Folder build / hasil kompilasi
+dist/
+build/
