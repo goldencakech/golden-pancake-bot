@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
+const { SlashCommandBuilder, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, MessageFlags } = require('discord.js');
 
 const cards = require('../../utils/cardData');
 
@@ -38,6 +38,6 @@ module.exports = {
                 .setDisabled(cards.length <= 1) // Tombol Next dinonaktifkan jika hanya ada satu kartu
         );
 
-        await interaction.reply({ embeds: [embed], components: [row], ephemeral: true });
+        await interaction.reply({ embeds: [embed], components: [row], flags: MessageFlags.Ephemeral });
     }
 };

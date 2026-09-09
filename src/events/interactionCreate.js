@@ -1,4 +1,4 @@
-const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, ModalBuilder, TextInputBuilder, TextInputStyle } = require('discord.js');
+const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, ModalBuilder, TextInputBuilder, TextInputStyle, MessageFlags } = require('discord.js');
 const cards = require('../utils/cardData');
 
 module.exports = {
@@ -105,7 +105,7 @@ module.exports = {
                         .setStyle(ButtonStyle.Link)
                 );
 
-                await interaction.reply({ embeds: [embed], components: [row], ephemeral: true });
+                await interaction.reply({ embeds: [embed], components: [row], flags: MessageFlags.Ephemeral });
             }
         }
     }
