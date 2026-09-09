@@ -36,4 +36,15 @@ for (const file of eventFiles) {
     }
 }
 
+// Tambahkan kode ini di paling bawah file src/index.js
+const http = require('http');
+const PORT = process.env.PORT || 3000;
+
+http.createServer((req, res) => {
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end('Bot Discord TCG Online!');
+}).listen(PORT, () => {
+    console.log(`Server HTTP aktif di port ${PORT}`);
+});
+
 client.login(process.env.DISCORD_TOKEN);
